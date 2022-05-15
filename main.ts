@@ -6,13 +6,13 @@
  */
 
 //% color="#AA278D" weight=100
-namespace hello {
+namespace motor_servo_driver {
     //% block
     export function motor_forward() {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 1)
         pins.analogWritePin(AnalogPin.P8, 1023)
-        pins.analogWritePin(AnalogPin.P1, 600)
+
 
     }
 
@@ -21,7 +21,7 @@ namespace hello {
         pins.digitalWritePin(DigitalPin.P12, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.analogWritePin(AnalogPin.P8, 0)
-        pins.analogWritePin(AnalogPin.P1, 0)
+
 
     }
 
@@ -35,7 +35,26 @@ namespace hello {
         pins.digitalWritePin(DigitalPin.P12, 1)
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.analogWritePin(AnalogPin.P8, 1023)
-        pins.analogWritePin(AnalogPin.P1, 600)
+
 
     }
+
+    //% block   
+    export function servo_left() {
+        pins.servoWritePin(AnalogPin.P1, 0)
+
+    }
+
+    //% block   
+    export function servo_richt() {
+        pins.servoWritePin(AnalogPin.P1, 180)
+
+    }
+
+    //% block   
+    export function servo_center() {
+        pins.servoWritePin(AnalogPin.P1, 90)
+
+    }
+
 }
