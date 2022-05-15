@@ -38,10 +38,6 @@ namespace motor_servo_driver {
 
 
     }
-    //% block   
-    export function servo_left() {
-        pins.servoWritePin(AnalogPin.P1, 0)
 
-    }
     
 }
