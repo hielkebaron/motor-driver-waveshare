@@ -16,6 +16,15 @@ namespace hello {
 
     }
 
+    //% block
+    export function motor_stop() {
+        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.digitalWritePin(DigitalPin.P13, 0)
+        pins.analogWritePin(AnalogPin.P8, 0)
+        pins.analogWritePin(AnalogPin.P1, 0)
+
+    }
+
 
 
     // note that Caml casing yields lower case
